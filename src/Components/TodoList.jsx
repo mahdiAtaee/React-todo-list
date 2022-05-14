@@ -7,8 +7,6 @@ export default function TodoList() {
   const [value, setvalue] = useState("");
   const [todos, setTodos] = useState([]);
 
-  
-
   return (
     <>
       <Title />
@@ -19,7 +17,7 @@ export default function TodoList() {
           todos={todos}
           setTodos={setTodos}
         />
-        <Todo />
+        <Todo todos={todos} setTodos={setTodos} />
       </div>
     </>
   );

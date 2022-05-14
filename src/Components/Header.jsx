@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Header({ value, setvalue, todos, setTodos }) {
   function handleChange(e) {
@@ -6,7 +7,7 @@ export default function Header({ value, setvalue, todos, setTodos }) {
   }
   function handleSubmit(e) {
     e.preventDefault();
-    setTodos([...todos, { text: value, complete: false }]);
+    setTodos([...todos, { text: value, complete: false, id: uuidv4() }]);
     setvalue("");
   }
 

@@ -48,7 +48,7 @@ export default function TodoList() {
   return (
     <>
       <Title />
-      <div className="container">
+      <div className="container blur">
         <Header
           value={value}
           setvalue={setvalue}
